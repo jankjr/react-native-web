@@ -6,16 +6,16 @@ To run these benchmarks:
 yarn benchmark
 ```
 
-Append `?fastest` to the URL to include the fastest "other libraries", and
-`?all` to include all the "other libraries".
+To run benchmarks for individual implementations append `?<name>,<name>` to the
+URL, e.g., `?css-modules,react-native-web`.
 
 ## Notes
 
 The components used in the render benchmarks are simple enough to be
-implemented by multiple UI or style libraries. The implementations are not
-equivalent in functionality. For example, the "React Native for Web" benchmark includes a
-complete `View` implementation and the `StyleSheet` also converts React Native
-styles to DOM styles, has deterministic resolution, and supports RTL layout.
+implemented by multiple UI or style libraries. The implementations and the
+features of the style libraries are not equivalent in functionality. Other than
+`css-modules`, the libraries without support for dynamic styles do not include
+the `SierpinskiTriangle` benchmark.
 
 ## Results
 

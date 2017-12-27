@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
   context: __dirname,
-  entry: './index',
+  entry: ['babel-polyfill', './src/index'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'performance.bundle.js'
